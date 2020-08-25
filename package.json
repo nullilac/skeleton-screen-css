@@ -1,0 +1,38 @@
+{
+    "name": "skeleton-screen-css",
+    "version": "1.0.0",
+    "description": "Skeleton screen elements on pure css",
+    "main": "dist/index.min.css",
+    "scripts": {
+        "dev": "parcel index.html --no-cache --out-dir build",
+        "build": "parcel build index.scss --no-content-hash --out-dir dist --no-minify --out-file index.css",
+        "build-minify": "parcel build index.scss --no-content-hash --out-dir dist --out-file index.min.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nullilac/skeleton-screen-css.git"
+    },
+    "keywords": [
+        "skeleton",
+        "skeleton screen",
+        "ghost",
+        "lazy",
+        "lazy-loading",
+        "loader",
+        "placeholder",
+        "performance"
+    ],
+    "author": "x.o.esdes@gmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nullilac/skeleton-screen-css/issues"
+    },
+    "homepage": "https://github.com/nullilac/skeleton-screen-css#readme",
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "cssnano-preset-advanced": "^4.0.7",
+        "parcel-bundler": "^1.12.4",
+        "postcss-preset-env": "^6.7.0",
+        "sass": "^1.26.10"
+    }
+}
