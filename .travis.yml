@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 12.18.3
+script: npm run pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_PAGES
+  local_dir: pages
+  keep_history: true
+  on:
+    branch: master
+    

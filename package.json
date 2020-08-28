@@ -4,9 +4,12 @@
     "description": "Skeleton screen elements on pure css",
     "main": "dist/index.min.css",
     "scripts": {
-        "dev": "parcel index.html --no-cache --out-dir build",
-        "build": "parcel build index.scss --no-content-hash --out-dir dist --no-minify --out-file index.css",
-        "build-minify": "parcel build index.scss --no-content-hash --out-dir dist --out-file index.min.css"
+        "watch": "parcel src/index.html --no-cache --out-dir build",
+        "build": "npm run build-no-minify && npm run build-minify && npm run copy-source",
+        "build-no-minify": "parcel build src/index.scss --no-content-hash --no-cache --out-dir dist --no-minify --out-file index.css",
+        "build-minify": "parcel build src/index.scss --no-content-hash --no-cache --out-dir dist --out-file index.min.css",
+        "copy-source": "cp src/index.scss dist/index.scss",
+        "pages": "rm -rf pages && parcel build src/index.html --out-dir pages --no-cache --public-url '.'" 
     },
     "repository": {
         "type": "git",
@@ -24,13 +27,17 @@
     ],
     "author": "x.o.esdes@gmail.com",
     "license": "MIT",
+    "browserslist": [
+        "> 0.1%",
+        "ie 11",
+        "not dead"
+    ],
     "bugs": {
         "url": "https://github.com/nullilac/skeleton-screen-css/issues"
     },
     "homepage": "https://github.com/nullilac/skeleton-screen-css#readme",
     "devDependencies": {
         "autoprefixer": "^9.8.6",
-        "cssnano-preset-advanced": "^4.0.7",
         "parcel-bundler": "^1.12.4",
         "postcss-preset-env": "^6.7.0",
         "sass": "^1.26.10"
