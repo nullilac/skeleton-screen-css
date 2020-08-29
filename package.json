@@ -1,7 +1,7 @@
 {
     "name": "skeleton-screen-css",
     "version": "1.0.0",
-    "description": "Skeleton screen elements on pure css",
+    "description": "Skeleton screen elements consisting of pure css. The package contains scss source with variables, minified and non-minified compiled css files with browser vendor prefixes.",
     "main": "dist/index.min.css",
     "scripts": {
         "watch": "parcel src/index.html --no-cache --out-dir build",

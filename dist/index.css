@@ -160,13 +160,13 @@
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.17);
   background-color: #ffffff;
 }
 
 .ssc-circle {
   display: block;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.17);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -175,13 +175,13 @@
 .ssc-hr {
   display: block;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.17);
   height: 2px;
 }
 
 .ssc-line {
   display: block;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.17);
   border-radius: 15px;
   margin-bottom: 8px;
   width: 100%;
@@ -193,7 +193,7 @@
 
 .ssc-head-line {
   display: block;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.17);
   border-radius: 15px;
   width: 100%;
   height: 24px;
@@ -201,7 +201,7 @@
 
 .ssc-square {
   display: block;
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: rgba(0, 0, 0, 0.17);
   width: 100%;
   height: 150px;
 }
