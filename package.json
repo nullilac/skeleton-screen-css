@@ -1,6 +1,6 @@
 {
     "name": "skeleton-screen-css",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A minimalistic complete set of elements for a skeleton screen consisting of pure css. Includes scss source, minified and non-minified compiled css files with browser vendor prefixes.",
     "main": "dist/index.min.css",
     "scripts": {
