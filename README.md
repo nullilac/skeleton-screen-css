@@ -1,27 +1,33 @@
-[![NPM version](https://img.shields.io/npm/v/skeleton-screen-css)](https://www.npmjs.com/package/skeleton-screen-css) [![Build Status](https://travis-ci.com/nullilac/skeleton-screen-css.svg?branch=master)](https://travis-ci.com/github/nullilac/skeleton-screen-css) ![npm bundle size](https://img.shields.io/bundlephobia/min/skeleton-screen-css) ![NPM](https://img.shields.io/npm/l/skeleton-screen-css)
+[![NPM version](https://img.shields.io/npm/v/skeleton-screen-css)](https://www.npmjs.com/package/skeleton-screen-css) [![Build Status](https://travis-ci.com/nullilac/skeleton-screen-css.svg?branch=master)](https://travis-ci.com/github/nullilac/skeleton-screen-css) ![npm bundle size](https://img.shields.io/bundlephobia/min/skeleton-screen-css) ![NPM](https://img.shields.io/npm/l/skeleton-screen-css) [![](https://data.jsdelivr.com/v1/package/npm/skeleton-screen-css/badge)](https://www.jsdelivr.com/package/npm/skeleton-screen-css)
 
 <p align="center">
     <img src="logo.png"></img>
 </p>
 
-<h2 align="center">SKELETON SCREEN CSS</h2>
+<h1 align="center">SKELETON SCREEN CSS</h1>
 
 <p align="center">
-    A minimalistic complete set of elements for a skeleton screen consisting of pure css. Includes scss source, minified and non-minified compiled css files with browser vendor prefixes.
+    Zero dependencies, framework agnostic, a minimalistic set of skeleton screen elements consisting of pure css. Includes scss source, minified and non-minified compiled css files with browser vendor prefixes.
 </p>
 
-### What is it for:
+## What is it:
 
-A skeleton screen is essentially a blank version of a page or block into which information is gradually loaded. At the time of loading, the content is replaced by a placeholder that repeats its outline and shows the user that it is loading. After successful loading, the placeholder is instantly replaced with content, creating a feeling of fast speed and responsiveness of the page.
+A skeleton screen is a visual placeholder that appears before the page content renders completely. It provides a low-fidelity preview of the fully rendered page in order to give the impression of a faster load time. A skeleton screen comprises lightly colored shapes, lines, and text that outline the structure of the page before the final content loads in its place.
 
-**[Examples page](https://nullilac.github.io/skeleton-screen-css/)**
+**[See example](https://nullilac.github.io/skeleton-screen-css/)**
 
-### Install:
+## How to install:
 
 with npm
 
 ```bash
 npm i skeleton-screen-css --save
+```
+
+or yarn
+
+```bash
+yarn add skeleton-screen-css
 ```
 
 or you can download the archive with the project and manually transfer the necessary files to your project folder.
@@ -32,40 +38,41 @@ or you can download the archive with the project and manually transfer the neces
 -   **index.css** - non-minified compiled css with browsers vendor prefixes;
 -   **index.min.css** - minified compiled css with browsers vendor prefixes (default with importing via modules);
 
-### Using:
+## How to use:
 
-##### Default - compiled minified css
 
-In browser:
+Via browser:
 
 ```html
 <link rel="stylesheet" href="index.min.css" />
 ```
 
-Webpack, rollup, parcel or any other bundler:
+Via webpack, rollup, parcel or any other bundler:
 
 ```javascript
 import "skeleton-screen-css";
+
 /* or */
+
 require("skeleton-screen-css");
 ```
 
-import with css/scss
+Via import from css/scss
 
 ```scss
 /* May required path to file or alias if bundler used.
 See the documentation for the bundler */
+
 @import "skeleton-screen-css";
 ```
 
-##### Source file
+## How to override default variables
 
 ```scss
-/* Overriding default variables */
+/* Override default variable */
 $skeleton-element-color: #cecece;
-/* $other-variable-name: value; */
 
-/* Import scss source file */
+/* Then import scss source file */
 @import "skeleton-screen-css/dist/index.scss";
 ```
 
@@ -77,7 +84,10 @@ $skeleton-element-color: rgba(0, 0, 0, 0.17) !default;
 $skeleton-loading-animation-time: 1.3s !default;
 
 $skeleton-margin-standart: 16px !default;
-$skeleton-margin-small: $skeleton-margin-standart / 2 !default;
+
+$skeleton-wrapper-padding: $skeleton-margin-standart !default;
+
+$skeleton-margin-small: calc($skeleton-margin-standart / 2) !default;
 
 $skeleton-card-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.17) !default;
 $skeleton-card-background-color: #ffffff !default;
@@ -89,14 +99,13 @@ $skeleton-hr-height: 2px !default;
 
 $skeleton-line-border-radius: 15px !default;
 $skeleton-line-height: 12px !default;
-$skeleton-line-margin-bottom: 8px !default;
 
-$skeleton-headline-height: $skeleton-line-height * 2 !default;
+$skeleton-headline-height: calc($skeleton-line-height * 2) !default;
 
 $skeleton-square-height: 150px !default;
 ```
 
-### Basic elements
+## Basic elements
 
 ```html
 <!-- Elements classes -->
@@ -120,10 +129,10 @@ $skeleton-square-height: 150px !default;
 <div class="ssc"></div>
 ```
 
-### Helpers classes
+## Helpers
 
 ```scss
-/** Helpers classes work inside 'ssc' class */
+/** Helpers classes */
 .ssc {
     .mb {
         margin-bottom: $skeleton-margin-standart;
@@ -205,6 +214,22 @@ $skeleton-square-height: 150px !default;
         display: inline-flex;
     }
 
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .flex-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+
     .align-center {
         align-items: center;
     }
@@ -225,15 +250,16 @@ $skeleton-square-height: 150px !default;
         justify-content: start;
     }
 
+    .justify-center {
+        justify-content: center;
+    }
+
     .justify-end {
         justify-content: end;
     }
+
     .justify-between {
         justify-content: space-between;
-    }
-
-    .justify-center {
-        justify-content: center;
     }
 
     .justify-around {
@@ -242,26 +268,27 @@ $skeleton-square-height: 150px !default;
 }
 ```
 
-### Example - card
-**[See more live examples](https://nullilac.github.io/skeleton-screen-css/)**
+## Example - card
+
+
 ```html
 <div class="ssc ssc-card" style="max-width: 300px">
     <div class="ssc-wrapper">
         <div class="ssc-square mb"></div>
         <div class="flex align-center justify-between">
             <div class="w-40">
-                <div class="ssc-line w-70"></div>
-                <div class="ssc-line w-100"></div>
+                <div class="ssc-line w-70 mbs"></div>
+                <div class="ssc-line w-100 mbs"></div>
             </div>
             <div class="ssc-head-line w-50"></div>
         </div>
     </div>
     <div class="ssc-hr"></div>
     <div class="ssc-wrapper">
-        <div class="ssc-line w-90"></div>
-        <div class="ssc-line w-30"></div>
-        <div class="ssc-line w-70"></div>
-        <div class="ssc-line w-50"></div>
+        <div class="ssc-line w-90 mbs"></div>
+        <div class="ssc-line w-30 mbs"></div>
+        <div class="ssc-line w-70 mbs"></div>
+        <div class="ssc-line w-50 mbs"></div>
     </div>
     <div class="ssc-hr"></div>
     <div class="ssc-wrapper">
@@ -269,3 +296,5 @@ $skeleton-square-height: 150px !default;
     </div>
 </div>
 ```
+
+**[See more live examples](https://nullilac.github.io/skeleton-screen-css/)**

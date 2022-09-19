@@ -1,7 +1,7 @@
 {
     "name": "skeleton-screen-css",
-    "version": "1.0.1",
-    "description": "A minimalistic complete set of elements for a skeleton screen consisting of pure css. Includes scss source, minified and non-minified compiled css files with browser vendor prefixes.",
+    "version": "1.1.0",
+    "description": "Zero dependencies, framework agnostic, a minimalistic set of skeleton screen elements consisting of pure css. Includes scss source, minified and non-minified compiled css files with browser vendor prefixes.",
     "main": "dist/index.min.css",
     "scripts": {
         "watch": "parcel src/index.html --no-cache --out-dir build",
@@ -21,6 +21,7 @@
     "keywords": [
         "skeleton",
         "skeleton screen",
+        "skeleton screen css",
         "ghost",
         "lazy",
         "lazy-loading",
@@ -32,7 +33,6 @@
     "license": "MIT",
     "browserslist": [
         "> 0.1%",
-        "ie 11",
         "not dead"
     ],
     "bugs": {
@@ -41,8 +41,8 @@
     "homepage": "https://github.com/nullilac/skeleton-screen-css#readme",
     "devDependencies": {
         "autoprefixer": "^9.8.6",
-        "parcel-bundler": "^1.12.4",
+        "parcel-bundler": "^1.12.5",
         "postcss-preset-env": "^6.7.0",
-        "sass": "^1.26.10"
+        "sass": "^1.54.9"
     }
 }
